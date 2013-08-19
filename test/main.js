@@ -16,7 +16,8 @@ describe('Simple Excel xlsx Export', function() {
 			conf.rows = [
 				['pi', (new Date(2013, 4, 1)).getJulian(), true, 3.14],
 				["e",  (new Date(2012, 4, 1)).getJulian(), false, 2.7182],
-				["null", null, null, null]
+				["null", null, null, null],
+				[undefined, undefined, undefined, undefined]
 			];
 			
             var result = nodeExcel.execute(conf);
