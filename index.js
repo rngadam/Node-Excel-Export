@@ -80,21 +80,21 @@ exports.execute = function(config){
 }
 
 var addNumberCol = function(cellRef, value){
-	if (value===null)
+	if (value===null || value===undefined)
 		return "";
 	else
 		return '<x:c r="'+cellRef+'" s="0" t="n"><x:v>'+value+'</x:v></x:c>';
 };
 
 var addDateCol = function(cellRef, value){
-	if (value===null)
+	if (value===null || value===undefined)
 		return "";
 	else
 		return '<x:c r="'+cellRef+'" s="1" t="n"><x:v>'+value+'</x:v></x:c>';
 };
 
 var addBoolCol = function(cellRef, value){
-	if (value===null)
+	if (value===null || value===undefined)
 		return "";
 	if (value){
 	  value = 1
@@ -103,7 +103,7 @@ var addBoolCol = function(cellRef, value){
 	return '<x:c r="'+cellRef+'" s="0" t="b"><x:v>'+value+'</x:v></x:c>';
 };
 var addStringCol = function(cellRef, value){
-	if (value===null)
+	if (value===null || value===undefined)
 		return "";
 	if (shareStrings.indexOf(value) < 0){
 		shareStrings.push(value);
